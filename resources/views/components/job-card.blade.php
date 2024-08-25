@@ -9,9 +9,10 @@
 
     <div>
         <div class="flex justify-between items-center mt-auto mb-4">
-            <x-tag>Tag</x-tag>
-            <x-tag>Tag</x-tag>
-            <x-tag>Tag</x-tag>
+            @foreach ($job->tags as $tag)
+                <x-tag :tag="$tag" />
+            @endforeach
+
         </div>
         <x-employer-logo :width="42" />
     </div>
